@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-
-
-// Ambil data acara dari formulir
-$tanggal = $_POST['tanggal'];
-$jam = $_POST['jam'];
-$judul = $_POST['judul'];
-$deskripsi = $_POST['deskripsi'];
-
-// Proses data acara (misalnya simpan ke file teks)
-
-// Contoh: Simpan ke file acara.txt
-$acara = "$tanggal - $jam - $judul - $deskripsi\n";
-file_put_contents('acara.txt', $acara, FILE_APPEND);
-
-// Arahkan pengguna kembali ke halaman index.html
-header('Location: index.html');
-
-?>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Acara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Daftar Acara</h1>
+    <a href="index.html">Kembali</a> </header>
+  <main>
+    <ul id="list-acara-ajax"></ul> </main>
+  <script src="script.js"></script>
+</body>
+</html>

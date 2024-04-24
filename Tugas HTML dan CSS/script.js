@@ -1,26 +1,9 @@
-// Simpan data acara
-let dataAcara = [];
-
-// Function untuk menambahkan acara baru
-function addAcara(tanggal, jam, judul, deskripsi) {
-  // Buat object acara baru
-  const acara = {
-    tanggal,
-    jam,
-    judul,
-    deskripsi,
-  };
-
-  // Tambahkan object acara ke array dataAcara
-  dataAcara.push(acara);
-
-  // Simpan data acara ke localStorage
+// Simpan data acara (contoh: di localStorage)
+function simpanDataAcara(dataAcara) {
   localStorage.setItem('dataAcara', JSON.stringify(dataAcara));
-
-  // Tampilkan daftar acara
-  tampilkanDaftarAcara();
 }
 
-// Function untuk menampilkan daftar acara
-function tampilkanDaftarAcara() {
+// Ambil data acara (contoh: dari localStorage)
+function ambilDataAcara() {
+  const dataAcara = JSON.parse(localStorage.getItem('dataAcara')) || [];
 }
